@@ -1,0 +1,24 @@
+Pytest decoratorler, pytest kütüphanesinin sağladığı ve test fonksiyonlarının davranışını değiştiren özel işaretlerdir. 
+Bu decoratorler, test fonksiyonlarını tanımlarken veya testleri düzenlerken kullanılabilir.
+Fonksiyon çalışmadan önce yapılması gereken bir şey varsa veya fonksiyonları dinamik olarak bir yerlere kayıt etmek istiyorsanız decoratorler kullanılır.
+Temel olarak bir decorator bir fonksiyonu alır, yeni fonksiyonellikler ekler ve döndürür.
+
+
+Pytest'deki decoratorler aşağıdaki gibi sıralanabilir:
+
+@pytest.fixture: Bu decorator, pytest içinde kullanılan bir fonksiyonun bir test durumundan önce veya sonra çalışmasını sağlar. 
+Fixtures, testler arasında ortamları paylaşmak ve testlerin düzgün şekilde çalışmasını sağlamak için kullanılır.
+
+@pytest.mark.parametrize: Bu decorator, aynı test fonksiyonunu farklı parametrelerle çalıştırmak için kullanılır. 
+Bir test fonksiyonu üzerinde kullanılan bu decorator, testin farklı senaryoları üzerinde çalışmasını sağlar.
+
+@pytest.mark.skip: Bu decorator, bir testin belirli bir koşulun karşılanmadığı durumlarda atlanmasını sağlar. 
+Örneğin, belirli bir işletim sistemi üzerinde çalışması gereken bir testin diğer işletim sistemlerinde atlanmasını sağlamak için kullanılabilir.
+
+@pytest.mark.xfail: Bu decorator, bir testin bilinçli olarak başarısız olmasını beklediğimiz durumlarda kullanılır. 
+Testin hedeflenen bir hata durumunda başarısız olmasını ve bu durumun beklenilen bir sonuç olduğunu belirtmek için kullanılır.
+
+@pytest.fixture(params=value): Bu decorator, birden çok fixture'ın parametrelerini ayarlamak için kullanılır. 
+Birden çok parametre değeriyle birlikte aynı fixture'ı birden çok kez çalıştırmak için kullanılabilir.
+
+Bu decoratorler, pytest'in esnekliğini ve özelleştirilebilirliğini artıran önemli araçlardır.
